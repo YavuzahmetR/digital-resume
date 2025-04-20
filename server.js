@@ -12,7 +12,7 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public')); 
-// Mail gönderme için route
+
 app.post('/send', (req, res) => {
   const { name, email, subject, message } = req.body;
 
