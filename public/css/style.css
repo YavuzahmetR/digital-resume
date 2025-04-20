@@ -1,0 +1,683 @@
+/* === GENEL AYARLAR === */
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-target {
+  scroll-margin-top: 60px;
+}
+
+.scroll-target-skills {
+  scroll-margin-top: 70px;
+}
+
+.scroll-target-internships {
+  scroll-margin-top: 70px;
+}
+
+.scroll-target-contact {
+  scroll-margin-top: 75px;
+}
+
+.scroll-target-projects {
+  scroll-margin-top: 70px;
+}
+
+#footer-container {
+  background-color: #0b0b0a;
+  margin: 0;
+  max-width: 100vw;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#footer-container span {
+  color: #fff !important;
+}
+
+.nav-link {
+  color: black !important; /* Bootstrap’in varsayılan mavi rengini override ediyoruz */
+  font-size: 20px !important;
+  padding-right: 20px !important;
+  /* Büyütüyoruz */ /* Orta kalınlık, istersen 600-700 de olur */
+}
+
+/* Hover efekti de ekleyelim yakışıklı dursun */
+.nav-link:hover {
+  color: #090909 !important; /* senin gradient renklerinden birini kullandım 😉 */
+  text-decoration: underline;
+  font-weight: 700; /* Kalınlaştırdık */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* === SABİT HEADER === */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(235, 217, 217, 0.894);
+  opacity: 1;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === ANA GÖRSEL VE ORTALI YAZI === */
+.full-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 1px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+.full-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.centered-text {
+  position: absolute;
+  top: 58%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  color: rgb(41, 170, 193);
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+}
+
+.text-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f5f5dc; /* pastel sarı */
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 550px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.text-box p {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* === BÖLÜM AYRAÇLARI === */
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(21, 6, 228, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+/* === HAKKIMDA BÖLÜMÜ === */
+.about-me {
+  text-align: center;
+  padding: 20px 40px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  box-shadow: 0 1px 20px 5px rgba(0, 0, 0, 0.3);
+  background-size: 400% 400%;
+  animation: aboutGradient 8s ease infinite;
+}
+
+@keyframes aboutGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.about-me p {
+  text-align: justify;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #fff;
+  margin: 30px 0;
+  font-family: "Arial", sans-serif;
+}
+
+.about-me-img img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  border: 5px solid #87dbff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* === EĞİTİM BİLGİLERİ === */
+.education-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.education-wrapper img {
+  width: 400px;
+  height: 200px;
+  left: 0;
+  right: 0;
+}
+.school-info-university p,
+.school-info-highschool p {
+  color: #000;
+}
+
+.school-info-highschool img {
+  margin-top: 60px;
+}
+
+.school-info-university {
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(135deg, #f66565, #fda085);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #f66565;
+}
+.school-info-university img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.school-info-university img:hover {
+  transform: scale(1.05);
+}
+.school-info-highschool {
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(135deg, #a1a2fd, #c2e9fb);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #a1a2fd;
+}
+.school-info-highschool img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.school-info-highschool img:hover {
+  transform: scale(1.05);
+}
+
+.divider {
+  width: 2px;
+  background-color: #6c757d;
+  opacity: 0.3;
+}
+
+/* === SKILLS - GENEL KAPSAYICI === */
+.skills {
+  background: linear-gradient(-45deg, #fbff00, #85ed16, #0eec15, #4ee2bb);
+  animation: skillsGradient 8s ease infinite;
+  box-shadow: 0 1px 20px 5px rgba(0, 0, 0, 0.3);
+  background-size: 400% 400%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+@keyframes skillsGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 90px;
+  padding: 0;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.skills li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skills li:hover {
+  transform: translateY(-6px);
+}
+
+/* === SKILLS SECTIONS (Sağ/Sol Bloklar) === */
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skills-section,
+.special-skills-section {
+  flex: 1;
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-radius: 10px;
+  border-top: 5px solid #00b894;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.skills-section h3,
+.special-skills-section h3,
+.skills-middle-content h3 {
+  text-align: center;
+  margin-left: 0px;
+  margin-top: 30px;
+}
+
+.skills-section ul,
+.special-skills-section ul {
+  list-style-type: none;
+  gap: 60px;
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
+  margin-left: 1.2rem;
+}
+
+.skills-section li,
+.special-skills-section li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background-color: #74d997;
+  padding: 12px 16px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #444;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+/* === ORTA BLOK YETENEKLER === */
+.skills-middle-content {
+  background-color: #f0f4f8;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border-top: 5px solid #00b894;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+/* === YETENEK BLOKLARI === */
+.skill-block {
+  background-color: #9eddb4;
+  border-left: 5px solid #9eddb4;
+  border-right: 5px solid #9eddb4;
+  padding: 20px 25px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.3);
+}
+
+.skill-block h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 22px;
+  color: #2d3436;
+}
+
+.skill-block p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #212020;
+}
+
+.internships {
+  background: linear-gradient(-45deg, #e5d55d, #edac58, #e0725a, #e55353);
+  animation: internshipsGradient 8s ease infinite;
+  box-shadow: 0 1px 20px 5px rgba(0, 0, 0, 0.3);
+  background-size: 400% 400%;
+  text-align: center;
+  padding: 15px 10px;
+}
+
+@keyframes internshipsGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.internships-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.albaraka {
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px #ff5f6d;
+}
+.albaraka h5 {
+  padding: 25px;
+  font-size: 1.6em;
+  color: #fff;
+}
+.albaraka p {
+  font-size: 20px;
+}
+.vestel {
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(-90deg, #ff0000, #ffffff7f);
+  border-radius: 10px;
+  box-shadow: 0 0 2px #ff0000;
+}
+.vestel h5 {
+  padding: 25px;
+  font-size: 1.6em;
+  color: #fff;
+}
+#pad-top {
+  padding-top: 10px;
+}
+#pad-top-other {
+  padding-top: 2px;
+  padding-bottom: 0px;
+}
+.vestel p {
+  font-size: 20px;
+}
+
+.internships-card ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  list-style-type: none;
+}
+
+.internships-card li {
+  margin-bottom: 5px;
+  line-height: 1.4;
+  font-size: 1.4rem;
+}
+
+.internships-card a {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background 0.2s ease;
+}
+
+.internships-card a:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.vestel-li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  margin: 25px auto;
+  max-width: 650px;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vestel-li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.3);
+}
+
+.albaraka-li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 650px;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.albaraka-li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.3);
+}
+
+.contact-wrapper {
+  background: linear-gradient(360deg, #080808, #bcaeae7f);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  padding: 2rem;
+  box-shadow: 0 1px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contact-clouds {
+  flex: 1;
+  position: relative;
+  height: auto;
+  min-width: 150px;
+}
+
+.contact-clouds .cloud {
+  width: 100px;
+  height: 60px;
+  background: url("../svg/cloud.svg") no-repeat center/contain;
+  margin: 0 auto;
+}
+
+.contact-clouds .letter {
+  width: 30px;
+  height: 20px;
+  background: url("../svg/envelope-svgrepo-com.svg") no-repeat center/contain;
+  position: absolute;
+  top: 0;
+  animation: fall 4s infinite ease-in-out;
+}
+
+.contact-clouds.left .letter.one {
+  left: 20%;
+  animation-delay: 0s;
+}
+.contact-clouds.left .letter.two {
+  left: 70%;
+  animation-delay: 2s;
+}
+
+.contact-clouds.right .letter.one {
+  left: 20%;
+  animation-delay: 1s;
+}
+.contact-clouds.right .letter.two {
+  left: 80%;
+  animation-delay: 3s;
+}
+
+@keyframes fall {
+  0% {
+    top: 0;
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(15deg);
+  }
+  100% {
+    top: 50vh;
+    opacity: 0;
+    transform: rotate(-15deg);
+  }
+}
+
+.contact-section {
+  flex: 2;
+  padding: 2rem;
+  background-color: #8c8686;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1.5rem;
+}
+
+.social-links img {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: none;
+}
+
+.contact-form button {
+  background: #0077ff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background: #00070b;
+}
+
+.projects {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  box-shadow: 0 1px 20px 5px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+
+.projects-card {
+  background-color: #ffffffcc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+.projects-card:hover {
+  transform: scale(1.05);
+}
+
+.projects-card a {
+  background-color: #405d83;
+  color: #f1eded;
+  border: none;
+}
+
+.projects-card a:hover {
+  background-color: #464946;
+  color: #fff;
+}
+
+#udemy-icon {
+  background-color: #01b809;
+}
+#wordpress-icon {
+  background-color: #3c94ed;
+}
+#hotel-icon {
+  background-color: #f5a623;
+}
+
+.udemy-buttons-space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+  
