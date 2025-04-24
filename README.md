@@ -1,1 +1,1 @@
-# digital-resume
+# my-digital-resume
